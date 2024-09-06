@@ -5,6 +5,7 @@ CONFIG -= qt
 
 
 INCLUDEPATH += /usr/local/include/opencv
+INCLUDEPATH += /usr/include/opencv4
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui -lopencv_videoio
 
 INCLUDEPATH += /usr/include/
