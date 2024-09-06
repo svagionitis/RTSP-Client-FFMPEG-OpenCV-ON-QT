@@ -41,9 +41,17 @@ void ImageProc::process(FFmpegDecoder &decoder)
     }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-    FFmpegDecoder decoder("your rstp address");
+    if (argc < 2)
+    {
+        std::cerr << "Usage: " << argv[0] << " <RTSP URL>" << std::endl;
+        return 1;
+    }
+
+    std::string rtspUrl = argv[1];
+
+    FFmpegDecoder decoder(rtspUrl);
 
     decoder.connect();
     if(decoder.isConncected())
